@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<head>
+<title>penguin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel = "icon" href = "icon.svg" type="image/x-icon">
+<style>
+	body{
+		background: #c6faf1;
+	}
+	.penguin {
+		--penguin-skin: gray;
+		--penguin-belly: white;
+		--penguin-beak: orange;
+		position: relative;
+		margin: auto;
+		display: block;
+		margin-top: 5%;
+		width: 300px;
+		height: 300px;
+	}
+	.penguin__head {
+		position: absolute;
+		top: 10%;
+		left: 25%;
+		background: var(--penguin-skin);
+		width: 50%;
+		height: 45%;
+		border-radius: 70% 70% 60% 60%;
+		margin: auto;
+	}
+	.penguin__cheek {
+		position: absolute;
+		top: 15%;
+		background: var(--penguin-belly);
+		width: 60%;
+		height: 70%;
+		border-radius: 70% 70% 60% 60%;
+		margin: auto;
+	}
+	.penguin__cheek--left {
+		left: 5%;
+	}
+	.penguin__cheek--right {
+		left: 35%;
+	}
+	.penguin__eye {
+		position: absolute;
+		top: 45%;
+		background: black;
+		width: 15%;
+		height: 17%;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.penguin__eye--left {
+		left: 25%;
+	}
+	.penguin__eye--right {
+		left: 60%;
+	}
+	.eye__sparkle {
+		position: absolute;
+		top: 25%;
+		left: 15%;
+		background: rgba(255,255,255,0.9);
+		width: 35%;
+		height: 35%;
+		border-radius: 50%;
+	}
+	.penguin__beak {
+		background: var(--penguin-beak);
+		position: absolute;
+		margin: auto;		
+	}
+	.penguin__beak--top {
+		top: 60%;
+		left:0;
+		right:0;
+		width: 20%;
+		height: 10%;
+		border-radius: 50%;	
+		z-index: 1;
+	}
+	.penguin__beak--bottom {
+		top: 65%;
+		left:0;
+		right:0;
+		width: 16%;
+		height: 10%;
+		border-radius: 50%;
+		z-index: 2;
+	}
+	.blush {
+		position: absolute;
+		top: 65%;
+		background: pink;
+		width: 15%;
+		height: 10%;
+		border-radius: 50%;
+		z-index: 1;
+	}
+	.blush--left {
+		left: 16%;
+	}
+	.blush--right {
+		right: 16%;
+	}
+	.penguin__body {
+		position: absolute;
+		top: 40%;
+		left: 23.5%;
+		background: var(--penguin-skin);
+		width: 53%;
+		height: 45%;
+		border-radius: 70% 70% 100% 100%;
+	}
+	.penguin__belly {
+		position: absolute;
+		top: -12%;
+		left: 2.5%;
+		background: var(--penguin-belly, white);
+		width: 95%;
+		height: 106%;	
+		border-radius: 120% 120% 100% 100%;
+	}
+	.penguin__hand {
+		position: absolute;
+		top: 0%;
+		background: var(--penguin-skin);
+		width: 30%;
+		height: 60%;
+		border-radius: 30% 30% 30% 120%;
+		
+	}
+	.penguin__hand--left {
+		left: -5%;
+		transform: rotate(45deg) scaleX(-1);
+		z-index: -1;
+	}
+	.penguin__hand--right {
+		right: -5%;
+		transform: rotate(-45deg);
+		z-index: -1;
+	}
+	.penguin__feet {
+		position: absolute;
+		top: 85%;
+		background: var(--penguin-beak, orange);
+		width: 15%;
+		height: 30%;
+		border-radius: 50% 50% 50% 50%;
+		z-index: -1;
+	}
+	.penguin__feet--left {
+		left: 25%;
+		transform: rotate(-105deg);
+	}
+	.penguin__feet--right {
+		right: 25%;
+		transform: rotate(105deg);
+	}
+</style>
+</head>
+<body>
+	<div class="penguin">
+		<div class="penguin__head">
+			<div class="penguin__cheek penguin__cheek--left"></div>
+			<div class="penguin__cheek penguin__cheek--right"></div>
+			<div class="penguin__eye penguin__eye--left">
+				<div class="eye__sparkle"></div>
+			</div>
+			<div class="penguin__eye penguin__eye--right">
+			<div class="eye__sparkle"></div>
+			</div>
+			<div class="penguin__beak penguin__beak--top"></div>
+			<div class="penguin__beak penguin__beak--bottom"></div>
+			<div class="blush blush--left"></div>
+			<div class="blush blush--right"></div>
+		</div>
+		<div class="penguin__body">	
+			<div class="penguin__belly"></div>
+			<div class="penguin__hand penguin__hand--left"></div>
+			<div class="penguin__hand penguin__hand--right"></div>
+			<div class="penguin__feet penguin__feet--left"></div>
+			<div class="penguin__feet penguin__feet--right"></div>
+		</div>
+	</div>
+</body>
