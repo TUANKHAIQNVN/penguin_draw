@@ -12,19 +12,6 @@
 		--penguin-beak: orange;
 		--margin-top-penguin: 5%;
 	}
-	@media screen and (max-width: 479px) {
-		:root {
-			--penguin-size: 250px;
-			--penguin-skin: black;
-			--margin-top-penguin: 60%;
-		}
-	}
-	@media screen and (min-width: 480px) and (max-width: 1023px) {
-		:root {
-			--penguin-size: 400px;
-			--margin-top-penguin: 40%;
-		}
-	}
 	body{
 		background: #c6faf1;
 	}
@@ -79,10 +66,10 @@
 	.eye__sparkle {
 		position: absolute;
 		top: 25%;
-		left: 15%;
+		left: -23%;
 		background: rgba(255,255,255,0.9);
-		width: 35%;
-		height: 35%;
+		width: 150%;
+		height: 100%;
 		border-radius: 50%;
 	}
 	.penguin__beak {
@@ -198,6 +185,20 @@
 		right: 25%;
 		transform: rotate(105deg);
 	}
+	@media screen and (max-width: 479px) {
+		:root {
+			--penguin-size: 250px;
+			--penguin-skin: black;
+			--margin-top-penguin: 60%;
+		}
+	}
+	@media screen and (min-width: 480px) and (max-width: 1023px) {
+		:root {
+			--penguin-size: 400px;
+			--margin-top-penguin: 40%;
+		}
+	}
+	
 </style>
 </head>
 <body>
