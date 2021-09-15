@@ -5,19 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel = "icon" href = "icon.svg" type="image/x-icon">
 <style>
+	:root {
+		--penguin-size: 600px;
+		--penguin-skin: gray;
+		--penguin-belly: white;
+		--penguin-beak: orange;
+		--margin-top-penguin: 5%;
+	}
+	@media screen and (max-width: 479px) {
+		:root {
+			--penguin-size: 250px;
+			--penguin-skin: black;
+			--margin-top-penguin: 60%;
+		}
+	}
+	@media screen and (min-width: 480px) and (max-width: 1023px) {
+		:root {
+			--penguin-size: 400px;
+			--margin-top-penguin: 40%;
+		}
+	}
 	body{
 		background: #c6faf1;
 	}
 	.penguin {
-		--penguin-skin: gray;
-		--penguin-belly: white;
-		--penguin-beak: orange;
 		position: relative;
 		margin: auto;
 		display: block;
-		margin-top: 5%;
-		width: 300px;
-		height: 300px;
+		margin-top: var(--margin-top-penguin);
+		width: var(--penguin-size);
+		height: var(--penguin-size);
 	}
 	.penguin__head {
 		position: absolute;
@@ -133,10 +150,31 @@
 		border-radius: 30% 30% 30% 120%;
 		
 	}
+	@keyframes wave {
+		10% {
+			transform: rotate(110deg);
+		}	
+		20% {
+			transform: rotate(130deg);
+		}
+		30% {
+			transform: rotate(110deg);
+		}
+		40% {
+			transform: rotate(130deg);
+		}
+	}
 	.penguin__hand--left {
-		left: -5%;
-		transform: rotate(45deg) scaleX(-1);
+		top: 4%;
+		left: 24%;
+		border-radius: 30% 30% 120% 30%;
+		transform: rotate(70deg);
 		z-index: -1;
+		animation-name: wave;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		transform-origin: -5% 0%;
+		animation-timing-function: linear;
 	}
 	.penguin__hand--right {
 		right: -5%;
